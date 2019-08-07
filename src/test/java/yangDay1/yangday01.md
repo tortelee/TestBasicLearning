@@ -5,7 +5,16 @@
   例如当你在main文件中使用@Test会报错
   - provided ：编译时可以使用，运行时不会使用
   - runtime   测试 运行时
-  - system 
+  - system
+- exclusion 去掉框架
+`
+ <exclusions>
+     <exclusion>
+           <groupId>org.hamcrest</groupId>
+           <artifactId>hamcrest-core</artifactId>
+     </exclusion>
+ </exclusions>
+` 
 #### 测试重复
 #### 数据参数化
 public class Parameterized
@@ -58,3 +67,29 @@ junit 测试 格式为：
 public class suiteTest1 {
 }
 ```
+
+#### assertThat的使用
+-  一般匹配符
+   - assertThat( testedNumber, allOf( greaterThan(8), lessThan(16)));
+   -  assertThat( testedNumber, anyOf( greaterThan(16), lessThan(8) ) );
+   -  assertThat( testedNumber, anything() );
+   - assertThat( testedString, is( "developerWorks" ) );
+   - assertThat( testedString, not( "developerWorks" ) );
+- 字符串相关匹配符
+   -  assertThat( testedString, containsString( "developerWorks" ) );
+   - assertThat( testedString, endsWith( "developerWorks" ) ); 
+   - assertThat( testedString, startsWith( "developerWorks" ) ); 
+   -  assertThat( testedValue, equalTo( expectedValue ) ); 
+   - assertThat( testedString, equalToIgnoringCase( "developerWorks" ) ); 
+   - assertThat( testedString, equalToIgnoringWhiteSpace( "developerWorks" ) );
+- 数值相关匹配符
+   - assertThat( testedDouble, closeTo( 20.0, 0.5 ) );
+   - assertThat( testedNumber, greaterThan(16.0) );
+   - assertThat( testedNumber, lessThan (16.0) );
+   - assertThat( testedNumber, greaterThanOrEqualTo (16.0) );
+   - assertThat( testedNumber, lessThanOrEqualTo (16.0) );
+- collection相关匹配符
+   - assertThat( mapObject, hasEntry( "key", "value" ) );
+   - assertThat( iterableObject, hasItem ( "element" ) );
+   - assertThat( mapObject, hasKey ( "key" ) );
+   - assertThat( mapObject, hasValue ( "key" ) );
