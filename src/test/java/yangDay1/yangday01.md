@@ -44,7 +44,17 @@ For example, to test a Fibonacci function, write:
  - 不能跟正常的在一个脚本，新建一个脚本
  ```java
 @Test(expected = NullPointerException.class)
+
 public void testStringIndexOf(){
     source.indexOf(str); // 抛异常
     }
+```
+
+#### 套件测试
+junit 测试 格式为：
+```java
+@RunWith(Suite.class)
+@Suite.SuiteClasses({StringTest2.class,canshuhua_string_indexof.class})
+public class suiteTest1 {
+}
 ```
