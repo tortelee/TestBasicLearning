@@ -37,6 +37,14 @@ For example, to test a Fibonacci function, write:
         }
  }
  ```
- 每次运行，会创建测试实例子，然后实例会按照序列顺序初始化参数。
- 生成instance后，执行test函数。
- <font color=red>`在编译的过程中，先实例化函数，通过构造函数。所以，参数是被先加载的。`</font>
+ - 每次运行，通过构造函数,会创建测试实例子,生成instance后，执行test函数。
+ 
+ #### 异常测试
+ 对抛出的异常进行测试
+ - 不能跟正常的在一个脚本，新建一个脚本
+ ```java
+@Test(expected = NullPointerException.class)
+public void testStringIndexOf(){
+    source.indexOf(str); // 抛异常
+    }
+```
