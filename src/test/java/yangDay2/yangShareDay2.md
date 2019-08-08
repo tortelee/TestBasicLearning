@@ -3,5 +3,5 @@
 + assertThat 可以用 assertTrue代替 
 ```
 
-##### 测试超时检测:dvd::plane::car:
+##### 测试超时检测:dvd::airplane::car:
  
