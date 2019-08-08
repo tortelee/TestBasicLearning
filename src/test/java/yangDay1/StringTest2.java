@@ -15,6 +15,7 @@ public class StringTest2 {
 
 
     public StringTest2(String target, String str) {
+        methodB();
         this.source = target;
         this.str = str;
     }
@@ -30,5 +31,21 @@ public class StringTest2 {
     @Test(expected = NullPointerException.class)
     public void testStringIndexOf(){
         source.indexOf(str);
+    }
+
+    private void methodB(){
+        System.out.println("进入method B");
+        StackTraceElement[] b = Thread.currentThread().getStackTrace();
+        for(int i=0;i<b.length;i++){
+            StackTraceElement stackTraceElement=b[i];
+            String className=stackTraceElement.getClassName();
+            String methodName=stackTraceElement.getMethodName();
+            String fileName=stackTraceElement.getFileName();
+            int lineNumber=stackTraceElement.getLineNumber();
+            System.out.println("i= "+i+",f= "
+                    +fileName+",cN= "+className+",mN= "+methodName);
+        }
+
+
     }
 }

@@ -1,4 +1,4 @@
-##### pom.xml文件
+##### pom.xml文件 :car:
 - scope 框架的有效范围\<scope>\</scope>
   - default \<scope>compile\</scope> :编译时才会运行
   - test :测试时使用这个框架
@@ -63,7 +63,7 @@ public class suiteTest1 {
 }
 ```
 
-#### assertThat的使用
+#### assertThat的使用---hamcrest中匹配器:airplane:
 -  一般匹配符
    - assertThat( testedNumber, allOf( greaterThan(8), lessThan(16)));
    -  assertThat( testedNumber, anyOf( greaterThan(16), lessThan(8) ) );
