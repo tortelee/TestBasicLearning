@@ -7,14 +7,14 @@
   - runtime   测试 运行时
   - system
 - exclusion 去掉框架
-`
+```
  <exclusions>
      <exclusion>
            <groupId>org.hamcrest</groupId>
            <artifactId>hamcrest-core</artifactId>
      </exclusion>
  </exclusions>
-` 
+``` 
 #### 测试重复
 #### 数据参数化
 public class Parameterized
@@ -51,13 +51,8 @@ For example, to test a Fibonacci function, write:
  #### 异常测试
  对抛出的异常进行测试
  - 不能跟正常的在一个脚本，新建一个脚本
- ```java
-@Test(expected = NullPointerException.class)
-
-public void testStringIndexOf(){
-    source.indexOf(str); // 抛异常
-    }
-```
+ 
+ 
 
 #### 套件测试
 junit 测试 格式为：
