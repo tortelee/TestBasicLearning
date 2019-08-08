@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/MI/IdeaProjects/TestBasicLearning/testng.xml">
+
+        <classes>
+            <class name="yangDay2.MathTest2">
+                <parameter name="a" value="2"></parameter>
+                <parameter name="b" value="2"></parameter>
+                <parameter name="z" value="4.0"></parameter>
+            </class>
+        </classes>
+    </test>
+</suite>
